@@ -20,7 +20,7 @@ app.set('view engine', 'jade');
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
-app.use(cookieParser());
+//app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', routes);
@@ -28,8 +28,13 @@ app.use('/users', users);
 app.use('/test1', test1);
 app.post('/test2', function(req, res) {
     console.log('HEADERS: ' + JSON.stringify(req.headers));
-    req.setEncoding('utf8');
-    console.log(req.param('data'));
+    console.log(req.body.name);
+    console.log(req.body.color);
+    console.log(req.params);
+    console.log(req.body);
+    console.log(req.query);
+    var name = req.body.name, color = req.body.color, test = req.body.test;
+    console.log( 'Values is ' + name + color + test);
     res.send('call test2 by POST');
 });
 
