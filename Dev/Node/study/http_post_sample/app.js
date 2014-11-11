@@ -27,5 +27,4 @@ callback = function(response) {
 var req = http.request(options, callback);
 //This is the data we are posting, it needs to be a string or a buffer
 req.write("data\n");
-req.write("data\n");
 req.end();
