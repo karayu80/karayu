@@ -5,6 +5,7 @@ var router = express.Router();
 *	GET customers listing.
 */
 
+// get customer list
 router.get('/', function(req, res) {
 	req.getConnection(function(err, connection) {
 		connection.query('SELECT * FROM customer', function(err,rows) {
@@ -16,11 +17,13 @@ router.get('/', function(req, res) {
 	});
 });
 
+// get add form for customer
 router.get('/add', function(req, res) {
 	res.render('add_customer', {page_title:"Add Customers - Node.js"});
 });
 
-router.post('/add', function(req, res) {
+// add customer
+router.post('/', function(req, res) {
 	var input = JSON.parse(JSON.stringify(req.body));
 	req.getConnection(function(err, connection) {
 		var data = {
@@ -32,15 +35,15 @@ router.post('/add', function(req, res) {
 
 		var query = connection.query("INSERT INTO customer set ? ", data, function(err, rows) {
 			if(err)
-				console.log("error inserting : %s ", err );
+				console.log("Error Inserting : %s ", err );
 
 			res.redirect('/customers');
 		});
 	});
 });
 
-router.get('/edit/:id', function(req, res) {
-	console.log("call get edit %d", req.params.id);
+// get edit form for user
+router.get('/:id/edit', function(req, res) {
 	var id = req.params.id;
 	req.getConnection(function(err, connection) {
 		connection.query('SELECT * FROM customer WHERE id = ?', id, function(err, rows) {
@@ -52,8 +55,8 @@ router.get('/edit/:id', function(req, res) {
 	});
 });
 
-router.post('/edit/:id', function(req, res) {
-	console.log("call post edit %d", req.params.id);
+// modify user data
+router.put('/:id', function(req, res) {
 	var input = JSON.parse(JSON.stringify(req.body));
 	var id = req.params.id;
 
@@ -75,8 +78,8 @@ router.post('/edit/:id', function(req, res) {
 
 });
 
-router.get('/delete/:id', function(req, res) {
-	console.log("call get delete %d", req.params.id);
+// get delete form
+router.get('/:id/delete', function(req, res) {
 	var id = req.params.id;
 	req.getConnection(function(err, connection) {
 		connection.query('SELECT * FROM customer WHERE id = ?', id, function(err, rows) {
@@ -88,11 +91,10 @@ router.get('/delete/:id', function(req, res) {
 	});
 });
 
-router.post('/delete/:id', function(req, res) {
-	console.log("call post delete %d", req.params.id);
+// delete user data
+router.delete('/:id', function(req, res) {
 	var id = req.params.id;
 	var input = JSON.parse(JSON.stringify(req.body));
-	console.log(input);
 	req.getConnection(function(err, connection) {
 		var data = {
 			name 	: input.name,
