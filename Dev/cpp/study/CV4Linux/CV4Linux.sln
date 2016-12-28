@@ -7,6 +7,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "base_test", "base_test\base
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "boost_test", "boost_test\boost_test.vcxproj", "{B29E6C35-8FD7-4784-B8D6-8B8D11A28EA2}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "dddd", "dddd\dddd.vcxproj", "{22CC89B1-3EF3-4362-9110-26571E60BB92}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|ARM = Debug|ARM
@@ -41,6 +43,18 @@ Global
 		{B29E6C35-8FD7-4784-B8D6-8B8D11A28EA2}.Release|x64.Build.0 = Release|x64
 		{B29E6C35-8FD7-4784-B8D6-8B8D11A28EA2}.Release|x86.ActiveCfg = Release|x86
 		{B29E6C35-8FD7-4784-B8D6-8B8D11A28EA2}.Release|x86.Build.0 = Release|x86
+		{22CC89B1-3EF3-4362-9110-26571E60BB92}.Debug|ARM.ActiveCfg = Debug|ARM
+		{22CC89B1-3EF3-4362-9110-26571E60BB92}.Debug|ARM.Build.0 = Debug|ARM
+		{22CC89B1-3EF3-4362-9110-26571E60BB92}.Debug|x64.ActiveCfg = Debug|x64
+		{22CC89B1-3EF3-4362-9110-26571E60BB92}.Debug|x64.Build.0 = Debug|x64
+		{22CC89B1-3EF3-4362-9110-26571E60BB92}.Debug|x86.ActiveCfg = Debug|x86
+		{22CC89B1-3EF3-4362-9110-26571E60BB92}.Debug|x86.Build.0 = Debug|x86
+		{22CC89B1-3EF3-4362-9110-26571E60BB92}.Release|ARM.ActiveCfg = Release|ARM
+		{22CC89B1-3EF3-4362-9110-26571E60BB92}.Release|ARM.Build.0 = Release|ARM
+		{22CC89B1-3EF3-4362-9110-26571E60BB92}.Release|x64.ActiveCfg = Release|x64
+		{22CC89B1-3EF3-4362-9110-26571E60BB92}.Release|x64.Build.0 = Release|x64
+		{22CC89B1-3EF3-4362-9110-26571E60BB92}.Release|x86.ActiveCfg = Release|x86
+		{22CC89B1-3EF3-4362-9110-26571E60BB92}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
