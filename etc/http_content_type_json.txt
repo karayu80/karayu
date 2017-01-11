@@ -1,0 +1,14 @@
+http://stackoverflow.com/questions/477816/what-is-the-correct-json-content-type
+
+json 타입을 표현하는 많이 방식들이 있는데
+application/json
+application/x-javascript
+text/javascript
+text/x-javascript
+text/x-json
+...
+
+The MIME media type for JSON text is application/json. The default encoding is UTF-8. (Source: RFC 4627).
+
+application/javascript
+요거를 쓰라고 한다
