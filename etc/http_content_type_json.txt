@@ -10,5 +10,6 @@ text/x-json
 
 The MIME media type for JSON text is application/json. The default encoding is UTF-8. (Source: RFC 4627).
 
+application/json
 application/javascript
 요거를 쓰라고 한다
